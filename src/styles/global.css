@@ -1,0 +1,132 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  color: #172740;
+  background: #f8f8f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --navy: #111f36;
+  --surface: #fff;
+  --border: #e7eaf0;
+  --muted: #657187;
+  --hover: #f0f3f8;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+}
+button,
+input {
+  font: inherit;
+}
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+  border: 0;
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+a {
+  touch-action: manipulation;
+}
+:focus-visible {
+  outline: 2px solid #6387c4;
+  outline-offset: 4px;
+}
+h1,
+h2,
+h3,
+p,
+dl,
+dd {
+  margin: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+svg {
+  display: block;
+  flex-shrink: 0;
+}
+::selection {
+  background: #dce6f7;
+  color: #142640;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 6px;
+  padding: 10px 15px;
+  min-height: 37px;
+  font-size: 11px;
+  font-weight: 550;
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+.button-primary {
+  background: var(--navy);
+  color: white;
+  border: 1px solid var(--navy);
+}
+.button-primary:hover:not(:disabled) {
+  background: #263b5a;
+  box-shadow: 0 3px 8px #11203918;
+}
+.button-secondary {
+  background: white;
+  color: #5a6880;
+  border: 1px solid #dfe4ec;
+  box-shadow: 0 1px 2px #14244003;
+}
+.button-secondary:hover:not(:disabled) {
+  background: #f8faff;
+  border-color: #bac7da;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

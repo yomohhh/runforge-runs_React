@@ -1,0 +1,104 @@
+.skeleton {
+  padding: 18px 24px;
+  border-top: 1px solid var(--border);
+}
+.loadingText {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #657187;
+  font-size: 12px;
+  padding: 6px 0 15px;
+}
+.spinner {
+  animation: spin 2s linear infinite;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 19px 0;
+  border-bottom: 1px solid #f0f2f6;
+}
+.row:last-child {
+  border: 0;
+}
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 7px;
+}
+.row > div {
+  flex: 1;
+}
+.line,
+.shortLine {
+  display: block;
+  height: 10px;
+  border-radius: 4px;
+  width: 170px;
+  max-width: 70%;
+}
+.shortLine {
+  width: 95px;
+  height: 7px;
+  margin-top: 9px;
+}
+.badge {
+  width: 85px;
+  height: 25px;
+  border-radius: 5px;
+}
+.avatar,
+.line,
+.shortLine,
+.badge {
+  background: linear-gradient(90deg, #eff2f7 25%, #f8f9fc 50%, #eff2f7 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.7s infinite;
+}
+.error {
+  text-align: center;
+  border-top: 1px solid var(--border);
+  padding: 60px 24px;
+}
+.errorIcon {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  background: #fcf0ef;
+  color: #bd6863;
+  border-radius: 16px;
+}
+.error h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.error p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: 380px;
+  margin: 0 auto 22px;
+}
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spinner,
+  .avatar,
+  .line,
+  .shortLine,
+  .badge {
+    animation: none;
+  }
+}

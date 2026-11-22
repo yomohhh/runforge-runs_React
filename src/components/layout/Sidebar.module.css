@@ -1,0 +1,236 @@
+.sidebar {
+  width: 224px;
+  flex-shrink: 0;
+  background: var(--navy);
+  color: #dce4f2;
+  padding: 31px 19px 18px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 730;
+  letter-spacing: -0.9px;
+  padding: 0 7px;
+  width: fit-content;
+  border-radius: 4px;
+}
+.logo {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  background: #f7f8fc;
+  color: var(--navy);
+  border-radius: 8px;
+}
+
+.workspace {
+  margin-top: 38px;
+  padding: 12px 9px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ffffff16;
+  border-radius: 7px;
+  background: #ffffff03;
+}
+.workspaceIcon {
+  color: #97abc8;
+}
+.workspace strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 550;
+}
+.workspace small {
+  display: block;
+  font-size: 9px;
+  color: #7f92af;
+  margin-top: 4px;
+}
+.workspaceTag {
+  font-family: var(--mono);
+  font-size: 8px;
+  color: #8fa2bf;
+  border: 1px solid #ffffff17;
+  border-radius: 3px;
+  padding: 2px 3px;
+  margin-left: auto;
+}
+.navSection {
+  margin-top: 30px;
+}
+.label {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  color: #8b9db8;
+  font-weight: 550;
+  padding-left: 11px;
+}
+.navSection nav {
+  margin-top: 12px;
+}
+.active {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 13px;
+  background: #f5f7fc;
+  color: #172842;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 650;
+}
+.navDot {
+  width: 5px;
+  height: 5px;
+  background: #526b94;
+  border-radius: 50%;
+  margin-left: auto;
+}
+.description {
+  margin-top: 34px;
+  padding: 0 11px;
+}
+.description .label {
+  padding: 0;
+}
+.description p {
+  font-size: 11px;
+  color: #8b9db8;
+  line-height: 1.9;
+  margin-top: 12px;
+}
+.description ul {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.description li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  color: #a2b1c8;
+}
+.description li svg {
+  color: #657f9e;
+}
+.bottom {
+  margin-top: auto;
+  padding-top: 38px;
+}
+.runtime {
+  border: 1px solid #ffffff14;
+  border-radius: 8px;
+  padding: 17px 14px 12px;
+  background: linear-gradient(135deg, #ffffff06, #ffffff00);
+}
+.runtimeIcon {
+  color: #93afd1;
+  display: block;
+  margin-bottom: 13px;
+}
+.runtime strong {
+  font-size: 12px;
+  font-weight: 550;
+}
+.runtime p {
+  font-size: 10px;
+  color: #8195b2;
+  line-height: 1.8;
+  margin-top: 7px;
+}
+.runtimeLine {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 7px;
+  letter-spacing: 0.04em;
+  color: #8b9db8;
+  border-top: 1px solid #ffffff0c;
+  padding-top: 12px;
+  margin-top: 17px;
+}
+.local {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  color: #7f94b1;
+  margin-top: 20px;
+  padding: 0 3px;
+}
+.local > span:last-child {
+  margin-left: auto;
+  color: #8b9db8;
+  font-family: var(--mono);
+  font-size: 8px;
+}
+.onlineDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #80b89e;
+  box-shadow: 0 0 0 3px #80b89e0d;
+}
+@media (max-width: 900px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    position: static;
+    padding: 18px 24px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
+  }
+  .brand {
+    font-size: 22px;
+    padding: 0;
+  }
+  .workspace {
+    margin: 0;
+    padding: 7px 10px;
+  }
+  .workspace small,
+  .workspaceTag,
+  .navSection,
+  .description,
+  .bottom {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .sidebar {
+    padding: 16px 20px;
+  }
+  .workspace {
+    border: 0;
+    background: transparent;
+    padding: 0;
+  }
+  .workspace strong {
+    font-size: 10px;
+  }
+  .workspaceIcon {
+    display: none;
+  }
+  .brand {
+    font-size: 21px;
+  }
+}

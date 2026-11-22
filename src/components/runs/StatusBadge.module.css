@@ -1,0 +1,45 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.2;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+.queued {
+  color: #656779;
+  background: #f0f0f5;
+  border-color: #e3e3eb;
+}
+.running {
+  color: #365bb1;
+  background: #edf2ff;
+  border-color: #dce5fc;
+}
+.running svg {
+  animation: spin 3s linear infinite;
+}
+.succeeded {
+  color: #28745a;
+  background: #eaf5ee;
+  border-color: #d8ecdf;
+}
+.failed {
+  color: #b44949;
+  background: #fceeee;
+  border-color: #f4dede;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .running svg {
+    animation: none;
+  }
+}
